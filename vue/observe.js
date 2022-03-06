@@ -5,4 +5,4 @@ function observe (data) {
   return new Observer(data);
 } 
 
-export { observe };
+export default observe;

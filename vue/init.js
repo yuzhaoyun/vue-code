@@ -1,7 +1,7 @@
 import { proxyData } from "./proxy";
 import observe from './observe';
 
-export function initState(vm) {
+function initState(vm) {
   var options = vm.$options;
   if (options.data) {
     initData(vm);
@@ -18,4 +18,6 @@ function initData(vm) {
   observe(vm._data);
 }
 
-export default {initState};
+export {
+  initState
+};

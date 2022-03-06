@@ -1,5 +1,5 @@
 import { ARR_METHODS } from "./config";
-import { observeArr } from "./observeArr";
+import observeArr from "./observeArr";
 
 var originArrMethods = Array.prototype,
     arrMethods = Object.create(originArrMethods);
