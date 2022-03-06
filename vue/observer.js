@@ -1,8 +1,11 @@
 import { defineReactiveData } from "./reactive";
+import { arrMethods } from "./array";
+import { observeArr } from "./observeArr";
 
 function Observer(data) {
   if (Array.isArray(data)) {
-
+    data.__proto__ = arrMethods;
+    observeArr(data);
   } else {
     this.walk(data);
   }
@@ -16,7 +19,7 @@ Observer.prototype.walk = function (data) {
   }
 }
 
-export default Observer;
-
 // {} defineProperty
 // [] 自己去写方法
+
+export default Observer;
